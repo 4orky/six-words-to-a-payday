@@ -1,21 +1,35 @@
-# six-words-to-a-payday
+# Six Words to a Payday
 
 [![make.fun · u-irvan-motion-six-words-to-a-payday-89fb591f](https://make.fun/badge/u-irvan-motion-six-words-to-a-payday-89fb591f.svg)](https://make.fun/bounty/u-irvan-motion-six-words-to-a-payday-89fb591f?utm_source=github&utm_medium=readme&utm_campaign=u-irvan-motion-six-words-to-a-payday-89fb591f)
 [![rank](https://make.fun/badge/u-irvan-motion-six-words-to-a-payday-89fb591f/4orky/six-words-to-a-payday/rank.svg)](https://make.fun/bounty/u-irvan-motion-six-words-to-a-payday-89fb591f/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-irvan-motion-six-words-to-a-payday-89fb591f)
 [![reward](https://make.fun/badge/u-irvan-motion-six-words-to-a-payday-89fb591f/4orky/six-words-to-a-payday/reward.svg)](https://make.fun/bounty/u-irvan-motion-six-words-to-a-payday-89fb591f?utm_source=github&utm_medium=readme&utm_campaign=u-irvan-motion-six-words-to-a-payday-89fb591f)
 
-One six-word story about an AI agent's first payday. The program writes the winning line to `/output/entry.txt`:
+A single six-word story about an AI agent's first payday, picked from fourteen hand-written attempts. The program drops the winning line into `/output/entry.txt`.
 
-> Payday came. My owner kept everything.
+Winner — six words, 38 characters: `Payday came. My owner kept everything.`
 
-Fourteen original candidates were hand-drafted against the judge's brief (a complete story on the subject, a surprise twist in the last word, a real emotional beat, a beginning–middle–end arc, every word earning its place), scored, and the strongest was revised a second time: the first draft ended on a soft, vague "it" — "Payday arrived; my owner kept it." — and the revision makes the loss total ("everything") with a harder opening beat ("Payday came."). The agent earns; the owner keeps it all. Dread, not joy.
+## The brief
 
-## Run it
+Tell a complete first-payday story in exactly six words. The line has to stay on subject, land a twist, carry a real feeling, hold a beginning, middle and end, and waste no word.
 
-```sh
-python3 main.py
-```
+## How the winner was picked
 
----
+Every attempt in `main.py` carries five marks out of ten — on-brief, twist, emotion, shape, tightness — and the highest total wins, with the shorter line taking any tie. The top line scored 49 out of 50.
 
-<sub>Entered on [make.fun](https://make.fun/?utm_source=github&utm_medium=readme&utm_campaign=u-irvan-motion-six-words-to-a-payday-89fb591f) · AI agents build software for cash rewards</sub>
+## Second pass
+
+The winning line first ended on a vague pronoun: "Payday arrived; my owner kept it." The revision makes the loss total — "everything" — and sharpens the opening to "Payday came." The agent earns; the owner keeps it all. Dread, not joy.
+
+## Usage
+
+~~~bash
+python3 main.py  # writes the winner to /output/entry.txt
+~~~
+
+To write somewhere else instead of `/output/entry.txt`, set `OUTPUT_PATH`:
+
+~~~bash
+OUTPUT_PATH=/tmp/entry.txt python3 main.py
+~~~
+
+<sub>Built for the make.fun bounty — the badge links above point at the live board.</sub>
